@@ -49,9 +49,9 @@ class SlidingDatePicker: UIView {
         setupUI()
     }
     
-    func initWith(previousNumberofDaysMonthOrYear:Int = 1, maximum:Int = 2, component: Calendar.Component = .day) {
+    func initWith(maximum:Int = 2, component: Calendar.Component = .day) {
         
-        guard let todayDate = Calendar.current.date(byAdding: .day, value: -(previousNumberofDaysMonthOrYear+1), to: Date()) else {
+        guard let todayDate = Calendar.current.date(byAdding: .day, value: -2, to: Date()) else {
             return
         }
 

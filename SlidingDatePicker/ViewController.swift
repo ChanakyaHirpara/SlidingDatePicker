@@ -18,7 +18,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
 
-        datePicker.initWith(previousNumberofDaysMonthOrYear: 1, maximum: 1, component: Calendar.Component.month)
+        datePicker.initWith(maximum: 1, component: Calendar.Component.month)
         datePicker.dateSelectionAction = { (date, dateInfo) in
             self.currentSelectedDate = date
             self.dateLbl.text = "\(dateInfo.DayNumber)(\(dateInfo.DayString))-\(dateInfo.MonthString)-\(dateInfo.YearString)"
