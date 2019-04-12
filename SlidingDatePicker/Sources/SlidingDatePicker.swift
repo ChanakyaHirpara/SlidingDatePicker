@@ -51,7 +51,7 @@ class SlidingDatePicker: UIView {
     
     func initWith(previousNumberofDaysMonthOrYear:Int = 1, maximum:Int = 2, component: Calendar.Component = .day) {
         
-        guard let todayDate = Calendar.current.date(byAdding: component, value: -(previousNumberofDaysMonthOrYear+1), to: Date()) else {
+        guard let todayDate = Calendar.current.date(byAdding: .day, value: -(previousNumberofDaysMonthOrYear+1), to: Date()) else {
             return
         }
 
@@ -66,7 +66,7 @@ class SlidingDatePicker: UIView {
             selectCellAt(indexPath: selectedIndexPath)
         }
     }
-    
+
     fileprivate func font() -> UIFont {
         return UIFont(name: "EurostileRegular", size: 14) ?? UIFont.systemFont(ofSize: 14)
     }
